@@ -1,0 +1,729 @@
+{
+	"info": {
+		"_postman_id": "34c60a9a-2063-4241-b425-e4b7797821ae",
+		"name": "BetheoneHistory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"sgd\",\r\n    \"password\" : \"NumcnryG1201\",\r\n    \"principal\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "students_level",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n  \"course\":11,\r\n  \"highDate\": \"2019-09-13T15:35:44.055Z\",\r\n  \"lowDate\": \"2019-03-13T15:35:44.055Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/history/students_level/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"history",
+						"students_level",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "students_level_by_period",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"teacherUser\":\"prueba7\",\r\n    \r\n    \"course\":11\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/history/students_level_by_period/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"history",
+						"students_level_by_period",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "students_state_by_secretary",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIhNCNdZVBuMWI2PW8vZUpWMUlrJ0piKkxRMzw9XCJbR2xYd3E8e198NWFEYWApaGlfZHYoeHNDWnlQVlYrOTtmIiwiaWF0IjoxNjMyOTMzNjQxLCJleHAiOjE2MzMwMjAwNDF9.xDL3CWL4u3uwZw90BtUZATWpxNIsiPrInw7yhbHzSk8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n  \"highDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowDate\": \"2019-03-13T15:35:44.055Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/history/students_state_by_secretary/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"history",
+						"students_state_by_secretary",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "count_students",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"teacherUser\":\"prueba7\",\r\n    \"course\":10,\r\n  \"highDate\": \"2030-09-13T15:35:44.055Z\",\r\n  \"lowDate\": \"2019-09-13T15:35:44.055Z\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/history/count_students/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"history",
+						"count_students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "teacher_info",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"teacherUser\":\"prueba7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/history/teacher_info/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"history",
+						"teacher_info",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list_courses_by_teacher",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"teacherUser\":\"prueba7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/history/list_courses_by_teacher/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"history",
+						"list_courses_by_teacher",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "students_level_by_missions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"teacherUser\":\"prueba7\",\r\n  \"highDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowDate\": \"2023-09-13T15:35:44.055Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/history/students_level_by_missions/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"history",
+						"students_level_by_missions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "group_mission_progress",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacherUser\":\"prueba7\", \r\n  \"course\":\"8\",\r\n  \"group\":\"0806\",\r\n  \"highDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowDate\": \"2019-09-13T15:35:44.055Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/history/group_mission_progress/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"history",
+						"group_mission_progress",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "students_level_by_courses",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"highDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowDate\": \"2018-09-13T15:35:44.055Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/history/students_level_by_courses/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"history",
+						"students_level_by_courses",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "students_goal_by_courses",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"course\":8,\r\n  \"courseGoal\":\"A1\",\r\n  \"highDate\": \"2021-09-13T15:35:44.055Z\",\r\n  \"lowDate\": \"2021-09-13T15:35:44.055Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/history/students_goal_by_courses/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"history",
+						"students_goal_by_courses",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "students_state",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"highDate\": \"2021-09-13T15:35:44.055Z\",\r\n  \"lowDate\": \"2021-09-13T15:35:44.055Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/history/students_state/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"history",
+						"students_state",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "students_state_by_department",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIhNCNdZVBuMWI2PW8vZUpWMUlrJ0piKkxRMzw9XCJbR2xYd3E8e198NWFEYWApaGlfZHYoeHNDWnlQVlYrOTtmIiwiaWF0IjoxNjMyOTMzNjQxLCJleHAiOjE2MzMwMjAwNDF9.xDL3CWL4u3uwZw90BtUZATWpxNIsiPrInw7yhbHzSk8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n  \"highDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowDate\": \"2019-03-13T15:35:44.055Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/history/students_state_by_department/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"history",
+						"students_state_by_department",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "students_goal_by",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"courseRol\":\"national\",\r\n  \"highDate\": \"2021-09-13T15:35:44.055Z\",\r\n  \"lowDate\": \"2021-09-13T15:35:44.055Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/history/students_goal_by/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"history",
+						"students_goal_by",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "course_mission_progress",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://adminbetheone.mineducacion.gov.co",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":10,\r\n  \"highDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowDate\": \"2019-09-13T15:35:44.055Z\",\r\n  \"courseGoal\":\"NOLVL\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/history/course_mission_progress/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"history",
+						"course_mission_progress",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}
