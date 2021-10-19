@@ -60,7 +60,7 @@ left join
             substr(user1.grupo,3,4) grupo    --> remove substr() on production        
             from BTO_USUARIO user1 
             LEFT JOIN BTO_DOCENTE  docente ON user1.codigo_colegio= docente.codigo_dane_est
-            LEFT JOIN BTO_GRUPO_DOCENTE1 curso ON curso.docente_id= docente.id         
+            LEFT JOIN BTO_GRUPO_DOCENTE curso ON curso.docente_id= docente.id         
             -- TAKES ONLY STUDENTS WITH THE SAME COURSE AS TEACHER 
             --(STUDENTS IN TEACHER COURSE) OR STUDENTS WITHOUT TEACHER
             where (ltrim(user1.curso, '0')=TO_CHAR(curso.curso) and substr(user1.grupo,3,4)=curso.grupo) --TEMPORAL SUBSTR 

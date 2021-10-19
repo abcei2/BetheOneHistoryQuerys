@@ -74,11 +74,15 @@ left join (
     inner join(
         select distinct(usuario_id) usuario_id, mision_clave from BTO_PROGRESO progreso
         inner join bto_minigames minigames on minigames.clave=progreso.minigame_clave
+        
+-- END THIRD PART  
+---     where fecha_progreso between :lowProgressDate:
+-- START FOURTH PART  
         group by usuario_id, mision_clave
     ) byminigame on byminigame.usuario_id = user_lvls.usuario_id
 ) on nivel.prioridad = max_prio
 group by nivel.clave,mision_clave;
--- END THIRD PART  
+-- END FOURTH PART  
 
 
 
