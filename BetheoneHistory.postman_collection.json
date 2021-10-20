@@ -271,7 +271,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"teacherUser\":\"prueba7\",\r\n  \"courseRol\":\"teacher\"\r\n}\r\n",
+							"raw": "{\r\n  \"courseRol\":\"national\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -417,7 +417,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\r\n  \"highDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowDate\": \"2023-03-13T15:35:44.055Z\"\r\n}\r\n",
+							"raw": "{\r\n\r\n  \"highStateDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowStateDate\": \"2023-03-13T15:35:44.055Z\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -464,7 +464,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":11,\r\n  \"group\":\"01\",\r\n  \"highDate\": \"2021-09-13T15:35:44.055Z\",\r\n  \"lowDate\": \"2019-09-13T15:35:44.055Z\"\r\n}",
+							"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":11,\r\n  \"group\":\"01\",\r\n  \"highStateDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowStateDate\": \"2023-03-13T15:35:44.055Z\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -511,7 +511,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\r\n  \"highDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowDate\": \"2019-03-13T15:35:44.055Z\"\r\n}\r\n",
+							"raw": "{\r\n\r\n  \"highStateDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowStateDate\": \"2019-03-13T15:35:44.055Z\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -675,6 +675,53 @@
 								"api",
 								"history",
 								"list_courses_by_teacher",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find_students",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://adminbetheone.mineducacion.gov.co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n  \"highRegisterDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowRegisterDate\": \"2011-09-13T15:35:44.055Z\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/history/find_students/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"history",
+								"find_students",
 								""
 							]
 						}
