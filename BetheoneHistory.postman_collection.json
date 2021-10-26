@@ -125,7 +125,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"highLvlDate\": \"2021-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2021-09-13T15:35:44.055Z\",\r\n  \"highProgressDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowProgressDate\": \"2019-09-13T15:35:44.055Z\"\r\n}\r\n",
+							"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":11,\r\n  \"group\":\"01\",\r\n  \"highProgressDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowProgressDate\": \"2019-09-13T15:35:44.055Z\",  \r\n  \"highLvlDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -271,7 +271,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"courseRol\":\"national\"\r\n}\r\n",
+							"raw": "{\r\n  \"courseGoalRol\":\"national\",\r\n  \"highLvlDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -365,7 +365,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":11,\r\n  \"group\":\"01\",\r\n  \"highProgressDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowProgressDate\": \"2019-09-13T15:35:44.055Z\",  \r\n  \"highLvlDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}",
+							"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":11,\r\n  \"group\":\"01\",\r\n  \"highLvlDate\": \"2021-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\",\r\n  \"highProgressDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowProgressDate\": \"2019-09-13T15:35:44.055Z\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -383,6 +383,53 @@
 								"api",
 								"history",
 								"group_mission_progress",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "count_students_goal_by",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://adminbetheone.mineducacion.gov.co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"courseGoalRol\":\"national\",\r\n  \"highLvlDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/history/count_students_goal_by/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"history",
+								"count_students_goal_by",
 								""
 							]
 						}
@@ -529,6 +576,53 @@
 								"api",
 								"history",
 								"students_state_by_department",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list_students_by_state",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://adminbetheone.mineducacion.gov.co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":11,\r\n  \"studentState\":\"Active\",\r\n  \"highStateDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowStateDate\": \"2019-03-13T15:35:44.055Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/history/list_students_by_state/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"history",
+								"list_students_by_state",
 								""
 							]
 						}
