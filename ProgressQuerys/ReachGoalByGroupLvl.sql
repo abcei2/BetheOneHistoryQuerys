@@ -1,17 +1,18 @@
+--GET ALL USERS WHO REACH THE COURSE GOAL OF A TEACHER
+-- TEACHER WHO DON'T HAVE REGISTERS ON BTO_CURSO_DOCENTE DO NOT APPEAR IN RESULTS
 
--- La cantidad de usuarios en un nivel en cada curso dado un docente, una secretaria o institución.
--- START FIRST PART
-select CASE WHEN cantidad_users is null THEN 0 ELSE cantidad_users END, 
-nivel.clave, curso 
+select sum(cantidad) cantidad , max(docente_grupos.prioridad),main_table.curso, main_table.grupo,main_table.prioridad, meta from (
+select CASE WHEN cantidad_users is null THEN 0 ELSE cantidad_users END cantidad, 
+nivel.clave, nivel.prioridad, curso, grupo 
 from BTO_NIVELES nivel
 left join 
 (
    -- TO COUNT ALL USERS PER LVL, ADDING USERS WHICH HAS NO WIN A LEVEL AS 'NO LEVEL' USER
-   select  count(usuario_id) cantidad_users, max_prio, curso from 
+   select  count(usuario_id) cantidad_users, max_prio, curso, grupo from 
    ( 
       select user1.usuario_id usuario_id, 
       CASE WHEN max_prio is null then 0 else max_prio end max_prio,
-      user_selecter.curso curso
+      user_selecter.curso curso, user_selecter.grupo grupo
       from BTO_USUARIO user1
 
       left join 
@@ -38,7 +39,7 @@ left join
                      left join BTO_PROGRESO progreso on user1.usuario_id= progreso.usuario_id
                      left join BTO_NIVELES nivel on nivel.clave = progreso.nivel_clave 
 -- END FIRST PART 
-            --where fecha between 'fecha1' and 'fecha2'                   
+            where fecha between :lowLvlDate and :highLvlDate              
 -- START SECOND PART
                      group by user1.usuario_id, nivel_clave, minigame_clave, prioridad
                   )
@@ -50,13 +51,13 @@ left join
          group by usuario_id
       ) info on user1.usuario_id = info.usuario_id
      inner join (
-        select usuario_id, curso from(
+        select usuario_id, curso, grupo from(
             select ROW_NUMBER() OVER (ORDER BY max(docente.id)  desc) id, 
             CASE WHEN docente.id is null THEN 0 ELSE docente.id END docente_id,  
             user1.usuario_id usuario_id,  
             max(user1.codigo_colegio) codigo_colegio,
             max(user1.CODIGO_SECRETARIA) CODIGO_SECRETARIA,
-            ltrim(user1.curso, '0') curso,
+            user1.curso curso,
             substr(user1.grupo,3,4) grupo    --> remove substr() on production        
             from BTO_USUARIO user1 
             LEFT JOIN BTO_DOCENTE  docente ON user1.codigo_colegio= docente.codigo_dane_est
@@ -68,16 +69,29 @@ left join
             group by  docente.id, user1.usuario_id, user1.grupo, user1.curso
          )
                            
--- END SECOND PART
-   -- CONDICIONES por ; docente.id = xx, curso.curso=xx, user1.codigo_colegio=xxxx, user1.codigo_secretaria=xxx, ej;
---   where docente_id= 16070    and curso=10
--- START LAST PART
-         group by usuario_id, curso  
+-- DOCENTE CONDITION!
+        where docente_id= :docenteId
+------------------
+         group by usuario_id, curso, grupo
      ) user_selecter on user_selecter.usuario_id=user1.usuario_id
    ) 
-   group by max_prio, curso
+   group by max_prio, curso, grupo
 )
-
-on nivel.prioridad = max_prio where curso is not null order by curso ;
-
--- END LAST PART
+on nivel.prioridad = max_prio 
+where curso is not null and grupo is not null order by curso, grupo, nivel.clave
+) main_table
+left join(
+-- LEFT JOIN TO GET THE GOAL OF COURSE AND GROUPS BY DOCENTE_ID
+-- JUST RETURN ONLY COURSES AND GROUPS THAT BELONG TO DOCENTE
+-- AND HAVE A REGISTER ON BTO_COURSE_DOCENTE
+     select grupo.curso curso, grupo.grupo grupo, meta, prioridad 
+    from  BTO_GRUPO_DOCENTE grupo
+    inner join BTO_CURSO_DOCENTE curso on curso.docente_id=grupo.docente_id 
+    and grupo.curso=curso.curso 
+    inner join BTO_NIVELES nivel on nivel.CLAVE=curso.meta
+    where grupo.docente_id=:docenteId 
+    order by grupo.curso, grupo.grupo
+) docente_grupos on docente_grupos.curso=main_table.curso 
+and docente_grupos.grupo=main_table.grupo
+where main_table.prioridad>=docente_grupos.prioridad
+group by main_table.curso, main_table.grupo,main_table.prioridad, meta;
