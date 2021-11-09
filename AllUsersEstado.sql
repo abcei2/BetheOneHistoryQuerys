@@ -48,7 +48,7 @@
              LEFT JOIN BTO_PROGRESO progreso on progreso.usuario_id = user1.usuario_id
              -- TAKES ONLY STUDENTS WITH THE SAME COURSE AS TEACHER 
              --(STUDENTS IN TEACHER COURSE) OR STUDENTS WITHOUT TEACHER
-             where (ltrim(user1.curso, '0')=TO_CHAR(curso.curso) and substr(user1.grupo,3,4)=curso.grupo) --TEMPORAL SUBSTR 
+             where (ltrim(user1.curso, '0')=TO_CHAR(curso.curso) and user1.grupo=curso.grupo) 
              or docente.codigo_dane_est is null          
              group by  docente.id, user1.usuario_id,user1.grupo, curso.grupo, curso.curso,
              primer_nombre, segundo_nombre,primer_apellido,

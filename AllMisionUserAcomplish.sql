@@ -23,7 +23,7 @@ select count(usuario_id) cantidad,avg(desempeno) desempeno, mision_clave, nivel_
    LEFT JOIN BTO_GRUPO_DOCENTE curso ON curso.docente_id= docente.id         
     
    where (
-      (ltrim(user1.curso, '0')=TO_CHAR(curso.curso) and substr(user1.grupo,3,4)=curso.grupo) --TEMPORAL SUBSTR 
+      (ltrim(user1.curso, '0')=TO_CHAR(curso.curso) and user1.grupo=curso.grupo) 
       or docente.codigo_dane_est is null
    ) and puntaje>=77
    -- END FIRST PART
