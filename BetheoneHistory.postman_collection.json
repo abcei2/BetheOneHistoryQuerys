@@ -31,7 +31,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":11,\r\n  \"grupo\":\"01\",\r\n  \"highLvlDate\": \"2030-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}\r\n\r\n",
+							"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":10,\r\n  \"group\":\"01\"\r\n}\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -271,7 +271,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"teacherUser\":\"prueba7\",\r\n  \"courseGoalRol\":\"teacher\",\r\n  \"highLvlDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}\r\n",
+							"raw": "{\r\n  \"courseGoalRol\":\"teacher\",\r\n  \"highLvlDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -412,7 +412,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"courseGoalRol\":\"national\",\r\n  \"highLvlDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}\r\n",
+							"raw": "{\r\n  \"courseGoalRol\":\"teacher\",\r\n  \"teacherUser\":\"prueba7\",\r\n  \"highLvlDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -558,7 +558,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":11,\r\n  \"group\":\"01\",\r\n  \"highStateDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowStateDate\": \"2023-03-13T15:35:44.055Z\"\r\n}",
+							"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":11,\r\n  \"group\":\"01\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -652,7 +652,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":11,\r\n  \"studentState\":\"Active\",\r\n  \"highStateDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowStateDate\": \"2019-03-13T15:35:44.055Z\"\r\n}",
+							"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"highStateDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowStateDate\": \"2019-03-13T15:35:44.055Z\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -845,7 +845,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \r\n  \"highRegisterDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowRegisterDate\": \"2011-09-13T15:35:44.055Z\"\r\n\r\n}",
+							"raw": "{\r\n    \"teacherUser\":\"prueba7\",\r\n  \"highRegisterDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowRegisterDate\": \"2011-09-13T15:35:44.055Z\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -853,7 +853,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:9090/api/history/find_students/",
+							"raw": "http://localhost:9090/api/history/find_students_by_register/",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -862,7 +862,153 @@
 							"path": [
 								"api",
 								"history",
-								"find_students",
+								"find_students_by_register",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TeacherGoal",
+			"item": [
+				{
+					"name": "update_teacher_goal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://adminbetheone.mineducacion.gov.co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"teacherUser\":\"prueba7\",\r\n \"courseList\":\r\n   [\r\n      {\"course\":3,  \"courseSubLvl\":\"PREA1.1\" , \"hoursWeek\":2},\r\n      {\"course\":4,  \"courseSubLvl\":\"A1.1\" , \"hoursWeek\":10},\r\n      {\"course\":5,  \"courseSubLvl\":\"A1.2\" , \"hoursWeek\":5},\r\n      {\"course\":6,  \"courseSubLvl\":\"A1.3\" , \"hoursWeek\":5},\r\n      {\"course\":7,  \"courseSubLvl\":\"A2.1\" , \"hoursWeek\":5},\r\n      {\"course\":8,  \"courseSubLvl\":\"A2.2\" , \"hoursWeek\":5},\r\n      {\"course\":9,  \"courseSubLvl\":\"B1.1\" , \"hoursWeek\":5},\r\n      {\"course\":10,  \"courseSubLvl\":\"B1.2\" , \"hoursWeek\":5},\r\n      {\"course\":11, \"courseSubLvl\":\"B1.3\" , \"hoursWeek\":5},\r\n      {\"course\":99, \"courseSubLvl\":\"B2\" , \"hoursWeek\":700}\r\n   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/history/update_teacher_goal/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"history",
+								"update_teacher_goal",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(DO NOT USE)! fill_teacher_goal_from_sublvl",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://adminbetheone.mineducacion.gov.co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/history/fill_teacher_sub_level/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"history",
+								"fill_teacher_sub_level",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find_teacher_goal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://adminbetheone.mineducacion.gov.co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"teacherUser\":\"prueba7\"\r\n}                                                               ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/history/find_teacher_goal/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"history",
+								"find_teacher_goal",
 								""
 							]
 						}
