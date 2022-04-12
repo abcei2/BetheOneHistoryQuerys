@@ -1,0 +1,3 @@
+update BTO_PERIODOS_ACADEMICOS set FECHA_INICIAL = add_months(FECHA_INICIAL,12),
+    FECHA_FINAL = add_months(FECHA_FINAL,12);
+    
