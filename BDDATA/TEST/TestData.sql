@@ -1,0 +1,8 @@
+@/home/oracle/BDDATA/TEST/BTOP_USUARIOS_RESTFUL.sql
+@/home/oracle/BDDATA/TEST/BTO_DOCENTE.sql
+@/home/oracle/BDDATA/TEST/BTO_GRUPO_DOCENTE.sql
+@/home/oracle/BDDATA/TEST/BTO_GRUPO_INSTITUCION.sql
+@/home/oracle/BDDATA/TEST/BTO_META_DOCENTE.sql
+@/home/oracle/BDDATA/TEST/BTO_META_INSTITUCION.sql
+@/home/oracle/BDDATA/TEST/BTO_USUARIO.sql
+@/home/oracle/BDDATA/TEST/BTO_PROGRESO.sql
