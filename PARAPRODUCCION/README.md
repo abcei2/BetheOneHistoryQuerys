@@ -27,7 +27,6 @@ Al hacerlo, cada que se corra el .jar (el backend) va a actualizar el esquema de
 2. Correr el archivo .jar, con el application properties actualizado para que se actualice el esquema de la db.
     - ```bash java -jar be-the-one-1.0.0-SNAPSHOT.jar --spring.config.location=.\application.properties ```
 3. Insertar información inicial, en el orden listado.
-    - BTO_LIMITCATEGORY.sql
     - BTO_LOCATION.sql
     - BTO_NIVELES.
     - BTO_SUBNIVEL.sql
