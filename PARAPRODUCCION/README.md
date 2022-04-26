@@ -31,6 +31,7 @@ Al hacerlo, cada que se corra el .jar (el backend) va a actualizar el esquema de
     - BTO_NIVELES.
     - BTO_SUBNIVEL.sql
     - BTO_META_NACIONAL.sql
+    - BTO_PERIODOS_ACADEMICOS.sql
 
 
 
