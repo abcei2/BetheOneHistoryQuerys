@@ -1,10 +1,10 @@
 ### Carpetas
 
-**INITIAL:** Son los datos iniciales que se necesitan para montar la plataforma completamente desde 0, sin usuarios ni registros de progresos.
-**PRDO_INITIAL26042022:** Son los valores iniciales supuestamente posee la base de datos de certificación.
-**PROD_SCHEME18042022:** Supuesto esquema de la base de datos de certificación, (backup sin datos).
-**TEST:** Datos que se pueden utilizar para probar en el entorno prueba con el esquema y datos de certificación luego de agregar los datos iniciales, como para observar el comportamiento de las estadisticas calculadas.
-**CREATEDOCENTEVIEW.sql:** Vista que se debe crear antes que se actualice todo el esquema, esta es utilizada por el dashboard para "juntaR" la información de la tabla BTO_DOCENTE y la tabla BTOP_USUARIO_RESTFULL.
+- **INITIAL:** Son los datos iniciales que se necesitan para montar la plataforma completamente desde 0, sin usuarios ni registros de progresos.
+- **PRDO_INITIAL26042022:** Son los valores iniciales supuestamente posee la base de datos de certificación.
+- **PROD_SCHEME18042022:** Supuesto esquema de la base de datos de certificación, (backup sin datos).
+- **TEST:** Datos que se pueden utilizar para probar en el entorno prueba con el esquema y datos de certificación luego de agregar los datos iniciales, como para observar el comportamiento de las estadisticas calculadas.
+- **CREATEDOCENTEVIEW.sql:** Vista que se debe crear antes que se actualice todo el esquema, esta es utilizada por el dashboard para "juntaR" la información de la tabla BTO_DOCENTE y la tabla BTOP_USUARIO_RESTFULL.
 
 ### Clona las imágenes de oracle
 ```bash
