@@ -1,0 +1,35 @@
+CLAVE,INSTRUCCIONES,NOMBRE,NUM_RONDAS,NUMERO_INTENTOS,RESUMEN,RETROALIMENTACION,TIEMPO_SEGUNDOS,MISION_CLAVE
+WORD_DROP,WORD DROP - INSTRUCTIONS
+
+You will see a sign at the bottom of the screen and three possible options of places where you could find it. Your mission is to select the correct option before the words touch the floor! Remember: you have 7 minutes to complete this challenge.,Word Drop,3,5,Let�s decode this clue!!!,0,420,M01
+
+SUPER_GRID,SUPER GRID - INSTRUCTIONS Your mission is to complete the super grid. Match the signs to the correct places. The signs are on the left. The places are in the first row of the grid. Remember: You have 5 minutes to complete this challenge.
+,Super Grid,3,5,Let�s decode this clue!!!,0,300,M01
+WORD_RESCUE,WORD RESCUE - INSTRUCTIONS
+
+Find the hidden word by choosing the correct letters at the bottom of the screen. You will see a definition of the hidden word to guide you. Remember: you have 12 minutes to complete the challenge.
+,Word Rescue,2,7,Let�s decode this clue!!!,0,720,M02
+MEMORY_MATCH,MEMORY MATCH - INSTRUCTIONS
+
+Your mission is to pick two cards that match a word with its correct definition. Continue to pick two cards until you find all the pairs. Remember: You have 7 minutes to complete this challenge.,Memory Match,2,20,Let�s decode this clue!!!,0,420,M02
+TALKING_CLUES,TALKING CLUES - INSTRUCTIONS
+
+Your mission is to complete the conversation. Help us by talking to Mrs. Kora Wirihana, the museum director. Select the correct answers. Remember: You have 6 minutes to complete this challenge.
+,Talking Clues,2,7,Let�s decode this clue!!!,0,360,M03
+FILL_THE_GAPS,FILL THE GAPS - INSTRUCTIONS
+
+Your mission is to complete the text. Read each paragraph carefully and fill in the blanks by choosing the grammatically correct option. Remember: you have 5 minutes to complete this challenge.
+,Fill the Gaps,2,7,Let�s decode this clue!!!,1,420,M04
+MEGA_READER1,MEGA READER # 1 - INSTRUCTIONS
+
+Your mission is to find explicit information in the text. Read the entire text carefully, don't miss any section! Choose the correct option to complete the sentences. Remember: You have 7 minutes to complete this challenge.
+,Mega Reader 1,2,5,Let�s decode this clue!!!,1,420,M05
+MEGA_READER2,MEGA READER # 2 - INSTRUCTIONS
+
+Your mission is to find the correct information inferred in the text. Read the entire text carefully, don't miss any section! Then answer the questions about information that is not explicitly found in the text. Remember: You have 7 minutes to complete this challenge.
+
+,Mega Reader 2,2,5,Let�s decode this clue!!!,1,420,M06
+DRAG_AND_DROP,DRAG AND DROP - INSTRUCTIONS
+
+Your mission is to complete the paragraph. Read the text carefully and choose the correct words to fill in the gaps. Drag the words to the gaps. Remember: You have 7 minutes to complete this challenge.
+,Drag and Drop,3,7,Let�s decode this clue!!!,1,420,M07

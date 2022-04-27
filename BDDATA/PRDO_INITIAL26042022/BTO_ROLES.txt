@@ -1,0 +1,6 @@
+ROLE_ID,NOMBRE
+3,Observador
+2,Secretaría
+1,Administrador
+5,Instituto
+4,Docente

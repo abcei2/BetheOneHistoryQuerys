@@ -1,0 +1,8 @@
+ID,NOMBRE
+1,Uso interactivo del ingles
+2,Conocimiento Lexical
+3,Conocimiento comunicativo
+4,Conocimiento Gramatical
+5,Lectura Literal
+6,Lectura Inferencial
+7,Conocimiento Gramatical y Lexical

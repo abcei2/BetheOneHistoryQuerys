@@ -1,0 +1,5 @@
+CLAVE,NOMBRE,PRIORIDAD
+A1,Fácil,2
+A2,Medio,3
+B1,Dificil,4
+PREA1,Starter,1
