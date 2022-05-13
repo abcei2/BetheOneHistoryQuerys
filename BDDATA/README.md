@@ -73,8 +73,8 @@ Salimos de la consola de sqlplus y en el bash del contenedor ejecutamos:
 impdp betheone/betheone@orcl DIRECTORY=dir_betheone_dmp DUMPFILE=EXPDPBETHE.dmp LOGFILE=log_import.log SCHEMAS=BETHEONE
 ```
 ##### Si debo repetir el proceso
-- Eliminar el usuario ```sql DROP USER betheone CASCADE;```
-- Eliminar el directorio ```sql DROP DIRECTORY dir_betheone_dmp;```
+- Eliminar el usuario ```DROP USER betheone CASCADE;```
+- Eliminar el directorio ```DROP DIRECTORY dir_betheone_dmp;```
 - Eliminar el espacio de la tabla ```DROP TABLESPACE TB_BETHEONE_DAT;```
 - Eliminar el archivo '/home/oracle/betheone.dbf' que se encuentra dentro de el contenedor.
 - Repetir los pasos anteriores.

@@ -1,0 +1,95 @@
+;;; 
+Export: Release 12.1.0.2.0 - Production on Tue May 3 08:42:13 2022
+
+Copyright (c) 1982, 2014, Oracle and/or its affiliates.  All rights reserved.
+;;; 
+Connected to: Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, Real Application Clusters, Automatic Storage Management, OLAP,
+Advanced Analytics and Real Application Testing options
+Iniciando "SYSTEM"."SYS_EXPORT_SCHEMA_02":  SYSTEM/******** SCHEMAS=BETHEONE directory=BCKTMP dumpfile=EXPDPBETHE_352022.dmp logfile=EXPDPBETHE_352022.log 
+Estimación en curso mediante el método BLOCKS...
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/TABLE_DATA
+Estimación total mediante el método BLOCKS: 85.56 MB
+Procesando el tipo de objeto SCHEMA_EXPORT/USER
+Procesando el tipo de objeto SCHEMA_EXPORT/ROLE_GRANT
+Procesando el tipo de objeto SCHEMA_EXPORT/DEFAULT_ROLE
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLESPACE_QUOTA
+Procesando el tipo de objeto SCHEMA_EXPORT/PRE_SCHEMA/PROCACT_SCHEMA
+Procesando el tipo de objeto SCHEMA_EXPORT/SEQUENCE/SEQUENCE
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/TABLE
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/GRANT/OWNER_GRANT/OBJECT_GRANT
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/COMMENT
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/IDENTITY_COLUMN
+Procesando el tipo de objeto SCHEMA_EXPORT/FUNCTION/FUNCTION
+Procesando el tipo de objeto SCHEMA_EXPORT/FUNCTION/ALTER_FUNCTION
+Procesando el tipo de objeto SCHEMA_EXPORT/VIEW/VIEW
+Procesando el tipo de objeto SCHEMA_EXPORT/VIEW/GRANT/OWNER_GRANT/OBJECT_GRANT
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/INDEX/INDEX
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/CONSTRAINT/CONSTRAINT
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/INDEX/STATISTICS/INDEX_STATISTICS
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/CONSTRAINT/REF_CONSTRAINT
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/TRIGGER
+Procesando el tipo de objeto SCHEMA_EXPORT/TABLE/STATISTICS/TABLE_STATISTICS
+Procesando el tipo de objeto SCHEMA_EXPORT/STATISTICS/MARKER
+. . "BETHEONE"."CLON_2_BTO_USUARIO"             11.30 MB   51123 filas exportadas
+. . "BETHEONE"."CLON_BTO_USUARIO"               10.29 MB   51144 filas exportadas
+. . "BETHEONE"."CLON_BTO_PROGRESO"              9.207 MB   99835 filas exportadas
+. . "BETHEONE"."BTO_USUARIO"                    55.50 KB     146 filas exportadas
+. . "BETHEONE"."BTO_PROGRESO_LIBRE"             517.0 KB      73 filas exportadas
+. . "BETHEONE"."BTO_PROGRESO"                   3.207 MB     394 filas exportadas
+. . "BETHEONE"."CLON_BTO_DOCENTE"               2.813 MB   15701 filas exportadas
+. . "BETHEONE"."CLON_BTO_USUARIO_LIBRE"         2.535 MB   26027 filas exportadas
+. . "BETHEONE"."CLON_2_BTO_USUARIO_LIBRE"       3.064 MB   26022 filas exportadas
+. . "BETHEONE"."CLON_BTO_PROGRESO_LIBRE"        2.391 MB   25998 filas exportadas
+. . "BETHEONE"."BTO_DOCENTE"                    2.206 MB   15495 filas exportadas
+. . "BETHEONE"."BTO_LOCATION"                   1.340 MB   33528 filas exportadas
+. . "BETHEONE"."BTO_LOCATION_130520"            338.8 KB    9791 filas exportadas
+. . "BETHEONE"."BTO_LOCATION_150520"            338.8 KB    9791 filas exportadas
+. . "BETHEONE"."BTO_LOCATION_190520"            338.8 KB    9791 filas exportadas
+. . "BETHEONE"."CLON_BTOP_USUARIOS_RESTFUL"     139.8 KB    1628 filas exportadas
+. . "BETHEONE"."SHEDLOCK"                       6.492 KB       2 filas exportadas
+. . "BETHEONE"."BTOP_USUARIOS_RESTFUL"          13.35 KB      73 filas exportadas
+. . "BETHEONE"."BTO_USUARIO_LIBRE"              17.89 KB      64 filas exportadas
+. . "BETHEONE"."BK_BTO_CURSO_DOCENTE"           6.328 KB      18 filas exportadas
+. . "BETHEONE"."BK_BTO_DOCENTE"                 14.61 KB       4 filas exportadas
+. . "BETHEONE"."BK_BTOP_USUARIOS_RESTFUL"       7.351 KB       3 filas exportadas
+. . "BETHEONE"."BK_2_BTOP_USUARIOS_RESTFUL"     7.632 KB       4 filas exportadas
+. . "BETHEONE"."BTO_CATEGORIAS"                 5.757 KB       7 filas exportadas
+. . "BETHEONE"."BTO_CURSO_DOCENTE"              8.312 KB     150 filas exportadas
+. . "BETHEONE"."BTO_DEPARTAMENTOS"              6.585 KB      33 filas exportadas
+. . "BETHEONE"."BTO_DEPARTAMENTOS_130520"       6.593 KB      33 filas exportadas
+. . "BETHEONE"."BTO_DEPARTAMENTOS_150520"       6.593 KB      33 filas exportadas
+. . "BETHEONE"."BTO_DEPARTAMENTOS_190520"       6.593 KB      33 filas exportadas
+. . "BETHEONE"."BTO_ESTABLECIMIENTOS_OBSERV"    7.523 KB      10 filas exportadas
+. . "BETHEONE"."BTO_LIMITCATEGORY"              6.171 KB       9 filas exportadas
+. . "BETHEONE"."BTO_MINIGAMES"                  11.46 KB       9 filas exportadas
+. . "BETHEONE"."BTO_MISIONES"                   6.664 KB       7 filas exportadas
+. . "BETHEONE"."BTO_MUNICIPIOS"                 35.78 KB    1122 filas exportadas
+. . "BETHEONE"."BTO_MUNICIPIOS_130520"          31.91 KB    1122 filas exportadas
+. . "BETHEONE"."BTO_MUNICIPIOS_150520"          31.91 KB    1122 filas exportadas
+. . "BETHEONE"."BTO_MUNICIPIOS_190520"          31.91 KB    1122 filas exportadas
+. . "BETHEONE"."BTO_NIVELES"                    5.992 KB       4 filas exportadas
+. . "BETHEONE"."BTO_ROLES"                      5.632 KB       5 filas exportadas
+. . "BETHEONE"."BTO_SECRETARIA"                 7.539 KB      96 filas exportadas
+. . "BETHEONE"."BTO_SUBNIVEL"                   7.046 KB      12 filas exportadas
+. . "BETHEONE"."BTO_TIPO_DOCUMENTO"             5.562 KB       3 filas exportadas
+. . "BETHEONE"."BTO_TOKEN"                      5.992 KB       1 filas exportadas
+. . "BETHEONE"."BTO_USUARIOS_RESTFUL"           5.679 KB       2 filas exportadas
+. . "BETHEONE"."BTO_USUARIO_150420"             14.13 KB       6 filas exportadas
+. . "BETHEONE"."AVERAGE_CATEGORYFN"                 0 KB       0 filas exportadas
+. . "BETHEONE"."AVERAGECATEGORYVIEW"                0 KB       0 filas exportadas
+. . "BETHEONE"."BK_V2_BTOP_USUARIOS_RESTFUL"        0 KB       0 filas exportadas
+. . "BETHEONE"."BK_09_BTOP_USUARIOS_RESTFUL"        0 KB       0 filas exportadas
+. . "BETHEONE"."BTO_META_DOCENTE"                   0 KB       0 filas exportadas
+. . "BETHEONE"."BTO_META_INSTITUCION"               0 KB       0 filas exportadas
+. . "BETHEONE"."BTO_USUARIOS"                       0 KB       0 filas exportadas
+. . "BETHEONE"."CLON_BTO_CURSO_DOCENTE"             0 KB       0 filas exportadas
+. . "BETHEONE"."DASHBOARD_DOCENTE"                  0 KB       0 filas exportadas
+. . "BETHEONE"."DOCENTE_VIEW"                       0 KB       0 filas exportadas
+. . "BETHEONE"."PARTICIPATIONBYSCHOLLSVIEW"         0 KB       0 filas exportadas
+. . "BETHEONE"."RANKINGFREEUSERSVIEW"               0 KB       0 filas exportadas
+La tabla maestra "SYSTEM"."SYS_EXPORT_SCHEMA_02" se ha cargado/descargado correctamente
+******************************************************************************
+El juego de archivos de volcado para SYSTEM.SYS_EXPORT_SCHEMA_02 es:
+  /backup/EXPDPBETHE_352022.dmp
+El trabajo "SYSTEM"."SYS_EXPORT_SCHEMA_02" ha terminado correctamente en Mar May 3 08:47:11 2022 elapsed 0 00:04:47

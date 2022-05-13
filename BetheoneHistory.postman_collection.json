@@ -47,17 +47,10 @@
 					"response": []
 				},
 				{
-					"name": "adduser Copy",
+					"name": "adduser",
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
+							"type": "noauth"
 						},
 						"method": "POST",
 						"header": [
@@ -69,7 +62,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\"teacherUser\":\"prueba7\",\r\n \"courseList\":\r\n   [\r\n      {\"course\":3,  \"courseSubLvl\":\"PREA1.1\" , \"hoursWeek\":2},\r\n      {\"course\":4,  \"courseSubLvl\":\"A1.1\" , \"hoursWeek\":10},\r\n      {\"course\":5,  \"courseSubLvl\":\"A1.2\" , \"hoursWeek\":12},\r\n      {\"course\":6,  \"courseSubLvl\":\"A1.3\" , \"hoursWeek\":3},\r\n      {\"course\":7,  \"courseSubLvl\":\"A2.1\" , \"hoursWeek\":6},\r\n      {\"course\":8,  \"courseSubLvl\":\"A2.2\" , \"hoursWeek\":3},\r\n      {\"course\":9,  \"courseSubLvl\":\"B1.1\" , \"hoursWeek\":6},\r\n      {\"course\":10,  \"courseSubLvl\":\"B1.2\" , \"hoursWeek\":5},\r\n      {\"course\":11, \"courseSubLvl\":\"B1.3\" , \"hoursWeek\":5},\r\n      {\"course\":99, \"courseSubLvl\":\"B2\" , \"hoursWeek\":700}\r\n   ]\r\n}",
+							"raw": "{\r\n    \"usuario\":\"admin\",\r\n    \"contraseña\":\"admin\",\r\n    \"correo\":\"correo@corre.co\",\r\n    \"rol_clave\":1\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -77,7 +70,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:9090/api/history/update_teacher_goal/",
+							"raw": "http://localhost:9090/api/user/adduser",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -85,9 +78,8 @@
 							"port": "9090",
 							"path": [
 								"api",
-								"history",
-								"update_teacher_goal",
-								""
+								"user",
+								"adduser"
 							]
 						}
 					},
@@ -124,7 +116,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\r\n  \"highStateDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowStateDate\": \"2023-03-13T15:35:44.055Z\"\r\n}\r\n",
+									"raw": "{\r\n\r\n  \"highStateDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowStateDate\": \"2013-03-13T15:35:44.055Z\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -132,12 +124,15 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:9090/api/history/students_state_by_secretary/",
+									"raw": "http://207.246.118.54:9091/api/history/students_state_by_secretary/",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"207",
+										"246",
+										"118",
+										"54"
 									],
-									"port": "9090",
+									"port": "9091",
 									"path": [
 										"api",
 										"history",
@@ -171,7 +166,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \r\n  \"highStateDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowStateDate\": \"2019-03-13T15:35:44.055Z\"\r\n}",
+									"raw": "{\r\n  \"teacherUser\":\"pablo\",\r\n  \r\n  \"highStateDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowStateDate\": \"2019-03-13T15:35:44.055Z\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -179,10 +174,13 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:9090/api/history/students_state/",
+									"raw": "http://10.242.140.211:9090/api/history/students_state/",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"10",
+										"242",
+										"140",
+										"211"
 									],
 									"port": "9090",
 									"path": [
@@ -218,7 +216,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\r\n  \"highStateDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowStateDate\": \"2019-03-13T15:35:44.055Z\"\r\n}\r\n",
+									"raw": "{\r\n\r\n  \"teacherUser\":\"santi\",\r\n  \"highStateDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowStateDate\": \"2019-03-13T15:35:44.055Z\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -226,12 +224,15 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:9090/api/history/students_state_by_department/",
+									"raw": "http://207.246.118.54:9091/api/history/students_state_by_department/",
 									"protocol": "http",
 									"host": [
-										"localhost"
+										"207",
+										"246",
+										"118",
+										"54"
 									],
-									"port": "9090",
+									"port": "9091",
 									"path": [
 										"api",
 										"history",
@@ -273,12 +274,14 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:9090/api/history/list_students_by_state/",
-									"protocol": "http",
+									"raw": "https://apibetheonecert.mineducacion.gov.co/api/history/list_students_by_state/",
+									"protocol": "https",
 									"host": [
-										"localhost"
+										"apibetheonecert",
+										"mineducacion",
+										"gov",
+										"co"
 									],
-									"port": "9090",
 									"path": [
 										"api",
 										"history",
@@ -317,7 +320,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"teacherUser\":\"prueba7\",\r\n  \"highRegisterDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowRegisterDate\": \"2011-09-13T15:35:44.055Z\"\r\n\r\n}",
+									"raw": "{\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -364,7 +367,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"teacherUser\":\"prueba7\"\r\n}",
+									"raw": "{\r\n    \"teacherUser\":\"santi\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -411,7 +414,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\r\n    \"teacherUser\":\"prueba7\"\r\n}",
+									"raw": "{\r\n\r\n    \"teacherUser\":\"santi\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -557,7 +560,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"courseGoalRol\":\"institute\",\r\n  \"schoolCode\":\"250001000531\",\r\n  \"highLvlDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}\r\n",
+									"raw": "{\r\n  \"courseGoalRol\":\"teacher\",\r\n  \"teacherUser\":\"santi\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -651,7 +654,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":11,\r\n  \"group\":\"01\",\r\n  \"highLvlDate\": \"2021-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\",\r\n  \"highProgressDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowProgressDate\": \"2019-09-13T15:35:44.055Z\"\r\n}",
+									"raw": "{\r\n  \"highLvlDate\": \"2021-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\",\r\n  \"highProgressDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowProgressDate\": \"2019-09-13T15:35:44.055Z\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -698,7 +701,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"courseGoalRol\":\"institute\",\r\n  \"schoolCode\":\"250001000531\",\r\n  \"highLvlDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}\r\n",
+									"raw": "{\r\n  \"courseGoalRol\":\"national\",\r\n  \"highLvlDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -706,7 +709,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:9090/api/history/count_students_goal_by/",
+									"raw": "http://localhost:9090/api/history/count_students_goal_by",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -715,8 +718,7 @@
 									"path": [
 										"api",
 										"history",
-										"count_students_goal_by",
-										""
+										"count_students_goal_by"
 									]
 								}
 							},
@@ -745,7 +747,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"highLvlDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}\r\n",
+									"raw": "{\r\n  \"teacherUser\":\"santi\",\r\n  \"courseGoalRol\":\"teacher\",\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -797,7 +799,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":10,\r\n  \"group\":\"01\"\r\n}\r\n\r\n",
+									"raw": "{\r\n  \"teacherUser\":\"prueba7\"\r\n}\r\n\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -844,7 +846,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\"teacherUser\":\"prueba7\"\r\n}",
+									"raw": "{\r\n    \"teacherUser\":\"santi\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -891,7 +893,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"teacherUser\":\"prueba7\",\r\n  \"course\":11,\r\n  \"group\":\"01\",\r\n  \"highProgressDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowProgressDate\": \"2019-09-13T15:35:44.055Z\",  \r\n  \"highLvlDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}\r\n",
+									"raw": "{\r\n}\r\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -938,7 +940,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n  \"highLvlDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowLvlDate\": \"2019-09-13T15:35:44.055Z\"\r\n}",
+									"raw": "{\r\n    \"teacherUser\":\"santi\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1094,7 +1096,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\"teacherUser\":\"prueba7\",\r\n \"courseList\":\r\n   [\r\n      {\"course\":3,  \"courseSubLvl\":\"PREA1.1\" , \"hoursWeek\":2},\r\n      {\"course\":4,  \"courseSubLvl\":\"A1.1\" , \"hoursWeek\":10},\r\n      {\"course\":5,  \"courseSubLvl\":\"A1.2\" , \"hoursWeek\":12},\r\n      {\"course\":6,  \"courseSubLvl\":\"A1.3\" , \"hoursWeek\":3},\r\n      {\"course\":7,  \"courseSubLvl\":\"A2.1\" , \"hoursWeek\":6},\r\n      {\"course\":8,  \"courseSubLvl\":\"A2.2\" , \"hoursWeek\":3},\r\n      {\"course\":9,  \"courseSubLvl\":\"B1.1\" , \"hoursWeek\":6},\r\n      {\"course\":10,  \"courseSubLvl\":\"B1.2\" , \"hoursWeek\":5},\r\n      {\"course\":11, \"courseSubLvl\":\"B1.3\" , \"hoursWeek\":5},\r\n      {\"course\":99, \"courseSubLvl\":\"B2\" , \"hoursWeek\":700}\r\n   ]\r\n}",
+									"raw": "{\r\n\"teacherUser\":\"santi\",\r\n \"courseList\":\r\n   [\r\n      {\"course\":3,  \"courseSubLvl\":\"PREA1.1\" , \"hoursWeek\":2},\r\n      {\"course\":4,  \"courseSubLvl\":\"A1.1\" , \"hoursWeek\":10},\r\n      {\"course\":5,  \"courseSubLvl\":\"A1.2\" , \"hoursWeek\":5},\r\n      {\"course\":6,  \"courseSubLvl\":\"A1.3\" , \"hoursWeek\":5},\r\n      {\"course\":7,  \"courseSubLvl\":\"A2.1\" , \"hoursWeek\":5},\r\n      {\"course\":8,  \"courseSubLvl\":\"A2.2\" , \"hoursWeek\":5},\r\n      {\"course\":9,  \"courseSubLvl\":\"B1.1\" , \"hoursWeek\":5},\r\n      {\"course\":10,  \"courseSubLvl\":\"B1.2\" , \"hoursWeek\":5},\r\n      {\"course\":11, \"courseSubLvl\":\"B1.3\" , \"hoursWeek\":5}\r\n   ]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1188,7 +1190,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\"teacherUser\":\"prueba7\"\r\n}                                                               ",
+									"raw": "{\r\n\"teacherUser\":\"santi\"\r\n}                                                               ",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1264,6 +1266,231 @@
 			]
 		},
 		{
+			"name": "/api/docente",
+			"item": [
+				{
+					"name": "buscar/userId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://adminbetheone.mineducacion.gov.co",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/api/docente/buscar/userId/santi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"docente",
+								"buscar",
+								"userId",
+								"santi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "documento",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://adminbetheone.mineducacion.gov.co",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/api/docente/documento/12124124",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"docente",
+								"documento",
+								"12124124"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "count",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://adminbetheone.mineducacion.gov.co",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9090/api/docente/buscar/userId/santi",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"docente",
+								"buscar",
+								"userId",
+								"santi"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/api/usuariolibre",
+			"item": [
+				{
+					"name": "count",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://adminbetheone.mineducacion.gov.co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n   \r\n  \"highRegisterDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowRegisterDate\": \"2023-09-13T15:35:44.055Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/usuariolibre/count/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"usuariolibre",
+								"count",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/api/student",
+			"item": [
+				{
+					"name": "count",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "https://adminbetheone.mineducacion.gov.co",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n   \r\n  \"highRegisterDate\": \"2023-09-13T15:35:44.055Z\",\r\n  \"lowRegisterDate\": \"2023-09-13T15:35:44.055Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/api/student/count/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"student",
+								"count",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "login_user",
 			"request": {
 				"method": "POST",
@@ -1276,7 +1503,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\" : \"institutoprueba\",\r\n    \"password\" : \"admin\",\r\n    \"principal\": 5\r\n}",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"admin\",\r\n    \"principal\": 1\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
